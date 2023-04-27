@@ -78,10 +78,11 @@ body {
     height: 10px;
 }
 .homeContainer {
-    margin: 0 1rem;
+    margin: auto;
     margin-top: 10rem;
+    max-width: 1280px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .initialContainer {
