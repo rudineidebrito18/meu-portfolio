@@ -1,0 +1,194 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+html {
+    font-size: 62.5%;
+}
+html,
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+}
+.topBarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    z-index: 5;
+}
+.topBarContainer .darkButtonContainer {
+    margin-left: 1rem;
+}
+.topBarContainer .darkButtonContainer .darkModeCheck{
+    display: none;
+}
+.topBarContainer .darkButtonContainer .slider {
+    position: relative;
+    height: 28px;
+    width: 52px;
+    border-radius: 28px;
+    background-color: var(--bg-color);
+    transition: all 0.5s ease-in-out;
+}
+.topBarContainer .darkButtonContainer .slider .toggleButton {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease-in-out;
+}
+.topBarContainer .darkButtonContainer .darkModeCheck:checked ~ label .slider .toggleButton{
+    left: 27px;
+}
+.topBarContainer .menuContainer .menu {
+    display: none;
+}
+.topBarContainer .menuContainer .hamburgerButton {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+.topBarContainer .menuContainer .hamburgerButton:hover {
+    filter: invert();
+}
+.topBarContainer .menuContainer .hamburgerButton .one,
+.topBarContainer .menuContainer .hamburgerButton .two,
+.topBarContainer .menuContainer .hamburgerButton .three {
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    width: 100%;
+    height: 10px;
+}
+.homeContainer {
+    margin: 0 1rem;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.initialContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.initialContainer .descriptionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.initialContainer .descriptionContainer p {
+    font-size: 2rem;
+    margin: 1rem 0;
+    color: var(--fill-color);
+}
+.initialContainer .descriptionContainer h2 {
+    font-size: 3rem;
+    color: var(--secondary-color);
+}
+.initialContainer .socialsButtonsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+    margin-top: 2rem;
+}
+.initialContainer .socialsButtonsContainer .socialButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-color);
+    border: solid 3px var(--fill-color);
+    text-decoration: none;
+    height: 7rem;
+    width: 18rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+.initialContainer .socialsButtonsContainer .socialButton:hover {
+   filter: invert();
+}
+.initialContainer .socialsButtonsContainer .socialButton img {
+    height: 4.2rem;
+    padding: 0.1rem 0;
+    margin-left: 1rem;
+}
+.darkMode .initialContainer .socialsButtonsContainer .socialButton img {
+    filter: invert();
+}
+.initialContainer .socialsButtonsContainer .socialButton p{
+    width: 100%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--fill-color);
+}
+.mainDecorationContainer {
+    position: relative;
+    width: 16rem;
+    height: 35rem;
+}
+.mainDecorationContainer img {
+    position: absolute;
+    width: 350px;
+    z-index: 3;
+}
+.mainDecorationContainer .circle1{
+    position: absolute;
+    background-color: var(--secondary-color);
+    height: 250px;
+    width: 250px;
+    top: -10px;
+    right: -150px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.mainDecorationContainer .circle2{
+    position: absolute;
+    background-color: var(--primary-color);
+    height: 250px;
+    width: 250px;
+    top: 120px;
+    border-radius: 50%;
+}
+.scrollButtonContainer {
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.scrollButtonContainer p {
+    font-size: 0.8rem;
+    color: var(--fill-color);
+}
+.scrollButtonContainer .scrollLine {
+    width: 20%;
+    height: 0.2rem;
+    border-radius: 15%;
+    background-color: var(--fill-color);
+}
+.scrollButtonContainer .scrollArrowDown {
+    font-size: 2rem;
+    transform: rotate(180deg);
+    color: var(--fill-color);
+}
