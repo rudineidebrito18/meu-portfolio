@@ -42,12 +42,12 @@
     .initialContainer .socialsButtonsContainer {
         flex-direction: row;
     }
-    .initialContainer .socialsButtonsContainer .socialButton {
+    .button {
         margin: 0 0.5rem;
         height: 5rem;
         width: 15rem;
     }
-    .initialContainer .socialsButtonsContainer .socialButton img {
+    .button img {
         height: 3rem;
     }
     .mainDecorationContainer img {

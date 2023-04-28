@@ -129,7 +129,7 @@ body {
     height: 50%;
     margin-top: 2rem;
 }
-.initialContainer .socialsButtonsContainer .socialButton {
+.button {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -143,18 +143,18 @@ body {
     cursor: pointer;
     transition-duration: background 0.3s;
 }
-.initialContainer .socialsButtonsContainer .socialButton:hover {
+.button:hover {
    filter: invert();
 }
-.initialContainer .socialsButtonsContainer .socialButton img {
+.button img {
     height: 4.2rem;
     padding: 0.1rem 0;
     margin-left: 1rem;
 }
-.darkMode .initialContainer .socialsButtonsContainer .socialButton img {
+.darkMode .button img {
     filter: invert();
 }
-.initialContainer .socialsButtonsContainer .socialButton p{
+.button p{
     width: 100%;
     font-size: 1.8rem;
     font-weight: 700;
@@ -210,4 +210,61 @@ body {
     font-size: 2rem;
     transform: rotate(180deg);
     color: var(--fill-color);
+}
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15rem;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.aboutContainer h2 {
+    color: var(--fill-color);
+    font-size: 2.2rem;
+    z-index: 2;
+}
+.aboutContainer > p {
+    margin-top: 5rem;
+    color: var(--fill-color);
+    font-size: 1.8rem;
+    width: 30rem;
+    z-index: 2;
+}
+.aboutContainer > .button {
+    margin-top: 3rem;
+    z-index: 2;
+}
+.aboutContainer .aboutDecoration {
+    position: absolute;
+    width: 40rem;
+    height: 40rem;
+}
+.aboutContainer .aboutDecoration .circle1 {
+    position: absolute;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    top: -5rem;
+    right: -6rem;
+}
+.aboutContainer .aboutDecoration .circle2 {
+    position: absolute;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    top: 3rem;
+    left: -6rem;
+}
+.aboutContainer .aboutDecoration .circle3 {
+    position: absolute;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.7;
+    top: 10rem;
+    right: -2rem;
 }
