@@ -2,63 +2,89 @@
     html {
         font-size: 75%;
     }
+
     .mainDecorationContainer {
         width: 300px;
     }
+
     .mainDecorationContainer .circle1 {
         height: 300px;
         width: 300px;
         top: -50px;
         right: -80px;
     }
+
     .mainDecorationContainer .circle2 {
         height: 300px;
         width: 300px;
         right: -20px;
     }
 }
+
 @media (min-width: 1024px) {
     html {
         font-size: 90%;
     }
+
+    .topBarContainer {
+        justify-content: space-between;
+    }
+
     .topBarContainer .menuContainer .menu {
         display: flex;
+        flex-direction: row !important;
         justify-content: space-around;
+        height: auto;
         list-style: none;
     }
-    .topBarContainer .menuContainer .menu li a{
+
+    .topBarContainer .menuContainer .menu li a {
         text-decoration: none;
         font-size: 1.4rem;
         margin: 0 0.8rem;
         color: var(--fill-color);
     }
+
+    .topBarContainer .darkButtonContainer {
+        position: relative;
+        top: 0;
+    }
+
     .topBarContainer .menuContainer .hamburgerButton {
         display: none;
     }
+
     .homeContainer {
         margin-top: 0;
         align-items: center;
     }
+
     .initialContainer .socialsButtonsContainer {
         flex-direction: row;
     }
+
     .button {
         margin: 0 0.5rem;
         height: 5rem;
         width: 15rem;
     }
+
     .button img {
         height: 3rem;
     }
+
     .mainDecorationContainer img {
         top: 80px;
     }
+
     .mainDecorationContainer .circle1 {
         top: 50px;
     }
+
     .mainDecorationContainer .circle2 {
         top: 180px
     }
+
     .scrollButtonContainer {
         margin-top: 0;
     }
