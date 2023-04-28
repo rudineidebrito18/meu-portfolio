@@ -13,6 +13,7 @@ body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     background-color: var(--bg-color);
+    transition: background 0.5s;
 }
 .topBarContainer {
     display: flex;
@@ -37,6 +38,7 @@ body {
     height: 28px;
     width: 52px;
     border-radius: 28px;
+    cursor: pointer;
     background-color: var(--bg-color);
     transition: all 0.5s ease-in-out;
 }
@@ -102,7 +104,23 @@ body {
 }
 .initialContainer .descriptionContainer h2 {
     font-size: 3rem;
+    width: 25.5rem;
     color: var(--secondary-color);
+    border-right: solid 3px var(--fill-color);
+    white-space: nowrap;
+    overflow: hidden;
+
+    animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 .initialContainer .socialsButtonsContainer {
     display: flex;
@@ -123,7 +141,7 @@ body {
     border-radius: 10px;
     margin: 0.5rem 0;
     cursor: pointer;
-    transition-duration: 0.3s;
+    transition-duration: background 0.3s;
 }
 .initialContainer .socialsButtonsContainer .socialButton:hover {
    filter: invert();
