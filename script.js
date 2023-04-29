@@ -1,11 +1,10 @@
-const darkMode = document.getElementById("darkMode");
+const lightMode = document.getElementById("lightMode");
 const root = document.getElementsByTagName('html')[0]
 
 let checked = true;
-darkMode.addEventListener('change', () => {
-    root.classList.toggle('darkMode', checked);
+lightMode.addEventListener('change', () => {
+    root.classList.toggle('lightMode', checked);
     checked = !checked;
-    console.log(darkMode.checked);
 });
 
 const menuLinks = document.querySelectorAll('a.menuLink');

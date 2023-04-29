@@ -40,7 +40,7 @@ body {
     margin-left: 1rem;
 }
 
-.topBarContainer .darkButtonContainer .darkModeCheck {
+.topBarContainer .darkButtonContainer .lightModeCheck {
     display: none;
 }
 
@@ -65,7 +65,7 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.topBarContainer .darkButtonContainer .darkModeCheck:checked~label .slider .toggleButton {
+.topBarContainer .darkButtonContainer .lightModeCheck:checked~label .slider .toggleButton {
     left: 27px;
 }
 
@@ -158,10 +158,11 @@ body {
     width: 4.2rem;
     padding: 0.1rem 0;
     margin-left: 1rem;
+    filter: invert();
 }
 
-.darkMode .button img {
-    filter: invert();
+.lightMode .button img {
+    filter: sepia();
 }
 
 .button p {
