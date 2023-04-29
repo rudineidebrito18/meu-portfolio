@@ -4,17 +4,21 @@
     padding: 0;
     outline: 0;
 }
+
 html {
     font-size: 62.5%;
-}
-html,
-body {
     height: 100vh;
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+}
+
+body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     background-color: var(--bg-color);
-    transition: background 0.3s;
+    transition: background 0.3s ease-in-out;
 }
+
 .topBarContainer {
     display: flex;
     justify-content: center;
@@ -28,15 +32,18 @@ body {
     z-index: 5;
     transition: all 0.2s ease-in-out;
 }
+
 .topBarContainer .darkButtonContainer {
     position: absolute;
     left: 0px;
     top: 15px;
     margin-left: 1rem;
 }
-.topBarContainer .darkButtonContainer .darkModeCheck{
+
+.topBarContainer .darkButtonContainer .darkModeCheck {
     display: none;
 }
+
 .topBarContainer .darkButtonContainer .slider {
     position: relative;
     height: 28px;
@@ -46,6 +53,7 @@ body {
     background-color: var(--bg-color);
     transition: all 0.5s ease-in-out;
 }
+
 .topBarContainer .darkButtonContainer .slider .toggleButton {
     position: absolute;
     height: 22px;
@@ -56,9 +64,11 @@ body {
     background-color: var(--secondary-color);
     transition: all 0.3s ease-in-out;
 }
-.topBarContainer .darkButtonContainer .darkModeCheck:checked ~ label .slider .toggleButton{
+
+.topBarContainer .darkButtonContainer .darkModeCheck:checked~label .slider .toggleButton {
     left: 27px;
 }
+
 .menu {
     height: 0;
     overflow: hidden;
@@ -66,6 +76,7 @@ body {
     transition: height 0.2s ease-in-out;
     /* display: none; */
 }
+
 .homeContainer {
     margin: auto;
     margin-top: 10rem;
@@ -74,21 +85,25 @@ body {
     justify-content: space-around;
     align-items: center;
 }
+
 .initialContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .initialContainer .descriptionContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
+
 .initialContainer .descriptionContainer p {
     font-size: 2rem;
     margin: 1rem 0;
     color: var(--fill-color);
 }
+
 .initialContainer .descriptionContainer h2 {
     font-size: 3rem;
     width: 25.5rem;
@@ -99,16 +114,19 @@ body {
 
     animation: typing 2s steps(18), blink 0.5s step-end infinite alternate;
 }
+
 @keyframes typing {
     from {
         width: 0;
     }
 }
+
 @keyframes blink {
     50% {
         border-color: transparent;
     }
 }
+
 .initialContainer .socialsButtonsContainer {
     display: flex;
     flex-direction: column;
@@ -116,6 +134,7 @@ body {
     height: 50%;
     margin-top: 2rem;
 }
+
 .button {
     display: flex;
     align-items: center;
@@ -130,35 +149,42 @@ body {
     cursor: pointer;
     transition-duration: background 0.3s;
 }
+
 .button:hover {
-   filter: invert();
+    filter: invert();
 }
+
 .button img {
-    height: 4.2rem;
+    width: 4.2rem;
     padding: 0.1rem 0;
     margin-left: 1rem;
 }
+
 .darkMode .button img {
     filter: invert();
 }
-.button p{
+
+.button p {
     width: 100%;
     font-size: 1.8rem;
     font-weight: 700;
     text-align: center;
     color: var(--fill-color);
 }
+
 .mainDecorationContainer {
     position: relative;
     width: 16rem;
     height: 35rem;
 }
+
 .mainDecorationContainer img {
     position: absolute;
     width: 350px;
     z-index: 3;
 }
-.mainDecorationContainer .circle1{
+
+.mainDecorationContainer .circle1 {
     position: absolute;
     background-color: var(--secondary-color);
     height: 250px;
@@ -168,7 +194,8 @@ body {
     border-radius: 50%;
     z-index: 2;
 }
-.mainDecorationContainer .circle2{
+
+.mainDecorationContainer .circle2 {
     position: absolute;
     background-color: var(--primary-color);
     height: 250px;
@@ -176,57 +203,67 @@ body {
     top: 120px;
     border-radius: 50%;
 }
+
 .scrollButtonContainer {
-    margin-top: 15rem;
+    margin: 15rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 }
+
 .scrollButtonContainer p {
     font-size: 0.8rem;
     color: var(--fill-color);
 }
+
 .scrollButtonContainer .scrollLine {
     width: 20%;
     height: 0.2rem;
     border-radius: 15%;
     background-color: var(--fill-color);
 }
+
 .scrollButtonContainer .scrollArrowDown {
     font-size: 2rem;
     transform: rotate(180deg);
     color: var(--fill-color);
 }
+
 .aboutContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 15rem;
+    margin-bottom: 15rem;
     align-items: center;
     justify-content: space-between;
     position: relative;
 }
+
 .aboutContainer h2 {
     color: var(--fill-color);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     z-index: 2;
 }
-.aboutContainer > p {
+
+.aboutContainer>p {
     margin-top: 5rem;
-    color: var(--fill-color);
+    color: var(--text-color);
     font-size: 1.8rem;
     width: 30rem;
     z-index: 2;
 }
-.aboutContainer > .button {
+
+.aboutContainer>.button {
     margin-top: 3rem;
     z-index: 2;
 }
+
 .aboutContainer .aboutDecoration {
     position: absolute;
     width: 40rem;
     height: 40rem;
 }
+
 .aboutContainer .aboutDecoration .circle1 {
     position: absolute;
     width: 32rem;
@@ -236,6 +273,7 @@ body {
     top: -5rem;
     right: -6rem;
 }
+
 .aboutContainer .aboutDecoration .circle2 {
     position: absolute;
     width: 32rem;
@@ -245,6 +283,7 @@ body {
     top: 3rem;
     left: -6rem;
 }
+
 .aboutContainer .aboutDecoration .circle3 {
     position: absolute;
     width: 32rem;
@@ -254,4 +293,56 @@ body {
     opacity: 0.7;
     top: 10rem;
     right: -2rem;
+}
+
+.projectsContainer {
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+}
+
+.projectsContainer h1 {
+    text-align: center;
+    color: var(--fill-color);
+    font-size: 2.5rem;
+    margin-bottom:5rem;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+}
+.cardsContainer .card {
+    width: 100%;
+    height: auto;
+    max-width: 50rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    border: solid 0.3rem var(--primary-color);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 7px 0px var(--fill-color);
+    padding-bottom: 1rem;
+}
+.cardsContainer .card > img {
+    width: 100%;
+}
+
+.cardsContainer .card > h2 {
+    margin-top: 1rem;
+    color: var(--fill-color);
+    font-size: 2rem;
+}
+.cardsContainer .card > p {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0;
 }

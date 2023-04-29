@@ -13,7 +13,7 @@ const menuChecked = document.getElementById('hamburgerButtonCheck')
 
 function bodyScrollBar(state) {
     const body = document.getElementsByTagName('body')[0]
-    body.style.overflow = state
+    body.style.overflowY = state
 }
 
 menuChecked.addEventListener('change', () => {
@@ -27,10 +27,20 @@ menuChecked.addEventListener('change', () => {
 menuLinks.forEach(e => {
     e.addEventListener('click', event => {
         event.preventDefault()
-        console.log({menuChecked})
+        const tamScreen = root.offsetHeight
         if (menuChecked.checked) {
             menuChecked.checked = false
+            scrollToIdOnClick(event, tamScreen)
+        } else {
+            scrollToIdOnClick(event)
         }
         bodyScrollBar('auto')
     })
 });
+
+function scrollToIdOnClick(event, tamScreen = 0) {
+    const id = event.target.getAttribute('href')
+    const to = document.querySelector(id).offsetTop
+    
+    window.scroll(0, to - tamScreen - 80)
+}
