@@ -154,6 +154,10 @@ body {
     filter: invert();
 }
 
+.button:active {
+    transform: scale(1.2);
+}
+
 .button img {
     width: 4.2rem;
     padding: 0.1rem 0;
