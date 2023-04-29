@@ -30,11 +30,12 @@
         justify-content: space-between;
     }
 
-    .topBarContainer .menuContainer .menu {
+    .topBarContainer .menuContainer ul.menu {
         display: flex;
-        flex-direction: row !important;
+        flex-direction: row;
         justify-content: space-around;
         height: auto;
+        opacity: 1;
         list-style: none;
     }
 

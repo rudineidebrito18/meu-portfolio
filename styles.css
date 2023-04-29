@@ -13,7 +13,7 @@ body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     background-color: var(--bg-color);
-    transition: background 0.5s;
+    transition: background 0.3s;
 }
 .topBarContainer {
     display: flex;
@@ -26,6 +26,7 @@ body {
     z-index: 10;
     top: 0;
     z-index: 5;
+    transition: all 0.2s ease-in-out;
 }
 .topBarContainer .darkButtonContainer {
     position: absolute;
@@ -61,7 +62,9 @@ body {
 .menu {
     height: 0;
     overflow: hidden;
-    transition-duration: 0.3s;
+    opacity: 0;
+    transition: height 0.2s ease-in-out;
+    /* display: none; */
 }
 .homeContainer {
     margin: auto;
