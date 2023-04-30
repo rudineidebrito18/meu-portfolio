@@ -29,9 +29,9 @@ menuLinks.forEach(e => {
         const tamScreen = root.offsetHeight
         if (menuChecked.checked) {
             menuChecked.checked = false
-            scrollToIdOnClick(event, tamScreen)
+            scrollToIdOnClick(event, tamScreen / 3)
         } else {
-            scrollToIdOnClick(event)
+            scrollToIdOnClick(event, 80)
         }
         bodyScrollBar('auto')
     })
@@ -41,5 +41,5 @@ function scrollToIdOnClick(event, tamScreen = 0) {
     const id = event.target.getAttribute('href')
     const to = document.querySelector(id).offsetTop
     
-    body.scroll(0, to - tamScreen - 80)
+    body.scroll(0, to - tamScreen)
 }
