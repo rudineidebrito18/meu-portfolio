@@ -9,9 +9,9 @@ lightMode.addEventListener('change', () => {
 
 const menuLinks = document.querySelectorAll('a.menuLink');
 const menuChecked = document.getElementById('hamburgerButtonCheck')
+const body = document.getElementsByTagName('body')[0]
 
 function bodyScrollBar(state) {
-    const body = document.getElementsByTagName('body')[0]
     body.style.overflowY = state
 }
 
@@ -41,5 +41,5 @@ function scrollToIdOnClick(event, tamScreen = 0) {
     const id = event.target.getAttribute('href')
     const to = document.querySelector(id).offsetTop
     
-    window.scroll(0, to - tamScreen - 80)
+    body.scroll(0, to - tamScreen - 80)
 }
