@@ -19,17 +19,23 @@ body {
     transition: background 0.3s ease-in-out;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--primary-color);
+    top: 0;
+    z-index: 10;
+}
+
 .topBarContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 60px;
     width: 100%;
-    background-color: var(--primary-color);
     position: sticky;
-    z-index: 10;
-    top: 0;
-    z-index: 5;
+    z-index: 15;
     transition: all 0.2s ease-in-out;
 }
 

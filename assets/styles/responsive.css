@@ -32,6 +32,8 @@
 
     .topBarContainer {
         justify-content: space-between;
+        max-width: 1380px;
+        margin: auto;
     }
 
     .topBarContainer .menuContainer ul.menu {
@@ -58,7 +60,7 @@
     }
 
     .homeContainer {
-        margin-top: 0;
+        margin: 6rem auto;
         align-items: center;
     }
 
