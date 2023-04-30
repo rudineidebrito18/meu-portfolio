@@ -19,10 +19,6 @@ body {
     transition: background 0.3s ease-in-out;
 }
 
-body {
-    scroll-padding-top: 25rem;
-}
-
 header {
     position: sticky;
     width: 100%;
