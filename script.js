@@ -11,17 +11,17 @@ const menuLinks = document.querySelectorAll('a.menuLink');
 const menuChecked = document.getElementById('hamburgerButtonCheck')
 const body = document.getElementsByTagName('body')[0]
 
-function bodyScrollBar(state) {
-    body.style.overflowY = state
-}
+// function bodyScrollBar(state) {
+//     body.style.overflowY = state
+// }
 
-menuChecked.addEventListener('change', () => {
-    if (menuChecked.checked) {
-        bodyScrollBar('hidden')
-    } else {
-        bodyScrollBar('auto')
-    }
-})
+// menuChecked.addEventListener('change', () => {
+//     if (menuChecked.checked) {
+//         bodyScrollBar('hidden')
+//     } else {
+//         bodyScrollBar('auto')
+//     }
+// })
 
 menuLinks.forEach(e => {
     e.addEventListener('click', event => {
@@ -31,7 +31,7 @@ menuLinks.forEach(e => {
             menuChecked.checked = false
         } 
         scrollToIdOnClick(event)
-        bodyScrollBar('auto')
+        // bodyScrollBar('auto')
     })
 });
 
