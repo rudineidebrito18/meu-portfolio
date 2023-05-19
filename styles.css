@@ -379,10 +379,6 @@ header {
     width: 100%;
 }
 
-.cardsContainer .card .buttonsContainer .button {
-    /* max-width: 15rem; */
-}
-
 .stacksContainer {
     width: 100%;
     height: auto;
